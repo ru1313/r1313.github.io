@@ -9,6 +9,23 @@
     padding-left: 24px;
     color: @black;
     cursor: pointer;
+    &--red {
+      color: @red;
+      .check__mark {
+        border-color: @red;
+      }
+      .check__input {
+        &:checked {
+          & ~ .check__mark {
+            background-color: @red;
+          }
+        }
+      }
+    }
+    &--disabled {
+      pointer-events: none;
+      opacity: 0.5;
+    }
 
     &__input{
         .is-hidden();

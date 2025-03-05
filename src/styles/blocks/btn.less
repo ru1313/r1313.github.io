@@ -17,8 +17,24 @@
     cursor: pointer;
 
     &:hover{
-        background-color: @black;
+        @media (hover: hover) {
+            background-color: @black;
+            color: @white;
+        }
+    }
+
+    &--red {
+        border: 1px solid @red;
+        background-color: @red;
         color: @white;
+
+        &:hover{
+            @media (hover: hover) {
+                border: 1px solid @red_dark;
+                background-color: @red_dark;
+                color: @white;
+            }
+        }
     }
 }
 
@@ -32,13 +48,20 @@
     border-radius: 50%;
     background-color: @black;
     transition: background-color 0.2s;
+    @media @bw768 {
+        width: 36px;
+        height: 36px;
+    }
   
     &:hover {
-      background-color: @red_dark;
+        @media (hover: hover){
+            background-color: @red_dark;
+        }
     }
 
     &__icon {
         margin: auto;
         color: @white;
+        pointer-events: none;
     }
 }

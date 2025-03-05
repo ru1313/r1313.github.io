@@ -10,6 +10,12 @@
       width: 100%;
       &--w50 {
         width: calc(50% - 30px);
+        @media @bw1170 {
+          width: calc(50% - 15px);
+        }
+        @media @bw600 {
+          width: 100%;
+        }
       }
     }
   
@@ -47,7 +53,10 @@
       display: flex;
       align-items: center;
       margin-top: 10px;
-  
+      @media @bw500 {
+        flex-direction: column;
+        gap: 30px;
+      }
     }
   
     &__submit {
@@ -69,7 +78,9 @@
       transition: color 0.2s;
   
       &:hover {
-        color: @red;
+        @media (hover: hover) {
+          color: @red;
+        }
       }
     }
 }

@@ -69,15 +69,24 @@
                                 },
                             ])
                         </div>
-                        <a href="#" class="listing__link link">Смотреть все</a>
+                        <a href="#" class="link__events link">
+                            Показать ещё
+                            <svg class="arrow__events-icon" width="92" height="63">
+                                <use xlink:href="assets/icons/symbols.svg#arrow"></use>
+                            </svg>
+                        </a>
                     </section>
                 </div>
 
                 <div class="listing events__table">
                     <h2 class="section-title">Дополнительные услуги</h2>
-
+                    <p class="listing__table-title">Перед запуском проекта, мы подготавливаем подробную смету и согласуем ее с клиентом. Убедившись, что все пожеланию учтены и мы можем приступать к реализациии проекта, начинается сложная, но интересная работа, результатом которой будет проведение вашего мероприятия на высшем уровне.</p>
                     @@include('blocks/table.html')
                 </div>
+                <section class="events__block">
+                    @@include('blocks/offers.html', {"class": "events__offers"})
+                    @@include('blocks/info.html', {"class": "events__info"})
+                </section>
             </main>
 
             @@include('blocks/page-footer.html')

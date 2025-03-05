@@ -4,34 +4,9 @@
     flex-direction: column;
     width: 100%;
     max-width: 1414px;
-    margin: 0 auto;
+    margin: 0 auto 93px;
     padding-left: 40px;
     padding-right: 40px;
-
-    @media @bw1660 {
-        width: calc(33.3333% - 40px);
-        margin: 0 20px 100px;
-      }
-
-    @media @bw1340 {
-        width: calc(33.3333% - 30px);
-        margin: 0 15px 100px;
-    }
-
-    @media @bw1020 {
-        width: calc(50% - 30px);
-        max-width: 405px;
-        margin: 0 15px 80px;
-    }
-
-    @media @bw768 {
-        margin: 0 10px 80px;
-    }
-
-    @media @bw650 {
-        width: 100%;
-        margin: 0 0 60px;
-    }
 
     &__events-list{
         display: flex;
@@ -40,34 +15,93 @@
 
         @media @bw1660 {
             margin: 0 -20px -100px;
-          }
-          @media @bw1340 {
+        }
+        
+        @media @bw1340 {
             margin: 0 -15px -100px;
-          }
-          @media @bw1020 {
+        }
+        
+        @media @bw1020 {
             justify-content: center;
             margin: 0 -15px -80px;
-          }
-          @media @bw768 {
+        }
+        
+        @media @bw768 {
             margin: 0 -10px -80px;
-          }
-          @media @bw650 {
+        }
+        
+        @media @bw650 {
             margin: 0 0 -60px;
-          }
+        }
     }
 
     &__event-card {
         width: calc(33.3333% - 60px);
         margin: 0 30px 120px;
+
+        @media @bw1660 {
+            width: calc(33.3333% - 40px);
+            margin: 0 20px 100px;
+        }
+
+        @media @bw1340 {
+            width: calc(33.3333% - 30px);
+            margin: 0 15px 100px;
+        }
+        
+        @media @bw1020 {
+            width: calc(50% - 30px);
+            max-width: 405px;
+            margin: 0 15px 80px;
+        }
+        
+        @media @bw768 {
+            margin: 0 10px 80px;
+        }
+        
+        @media @bw650 {
+            width: 100%;
+            margin: 0 0 60px;
+        }
     }
 
-    &__link{
+    &__link {
         font-family: @font1;
         font-weight: 600;
         align-self: flex-end;
         color: @black;
         width: 109px;
         height: 16px;
-        text-decoration: none; 
+        text-decoration: none;
+        margin-top: 85px;
+
+        &:hover {
+            @media (hover: hover){
+                color: @red;
+            }
+        }
+    }
+
+    &__table-title {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 21.79px;
+        text-align: left;
+        max-width: 868px;
+        height: auto;
+        margin: 0;
+        padding-bottom: 60px;
+
+        @media @bw1340 {
+            max-width: 829px;
+        }
+
+        @media @bw768 {
+            padding-bottom: 50px;
+        }
+
+        @media @bw600 {
+            padding-bottom: 30px;
+        }
     }
 }
